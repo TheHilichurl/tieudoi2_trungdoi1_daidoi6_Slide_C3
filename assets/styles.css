@@ -1,0 +1,442 @@
+/* ==========================================================================
+   DECK 2: COMIC ACTION GRAPHIC NOVEL (STYLE 14)
+   Color Palette: Vibrant Orange (#FF6B00 / #EA580C) & Deep Cobalt (#003882 / #001E42)
+   Background: Halftone Dots Pattern
+   Fonts: Bangers, Bebas Neue, Plus Jakarta Sans, Be Vietnam Pro
+   ========================================================================== */
+
+:root {
+  --comic-bg: #EFF6FF;
+  --comic-orange: #FF6B00;
+  --comic-orange-dark: #EA580C;
+  --comic-cobalt: #003882;
+  --comic-dark: #001E42;
+  --comic-border: #003882;
+  --font-body-size: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000E22;
+  color: var(--comic-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  user-select: none;
+}
+
+#top-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--comic-orange), #FFD600, var(--comic-cobalt));
+  width: 5%;
+  transition: width 0.3s ease;
+  z-index: 9999;
+}
+
+#toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--comic-cobalt);
+  border: 3px solid var(--comic-orange);
+  box-shadow: 4px 4px 0px #000;
+  border-radius: 8px;
+  padding: 12px 22px;
+  color: #FFF;
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+#toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #001E42 0%, #000814 100%);
+}
+
+#slide-stage {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  background: var(--comic-bg);
+  background-image: radial-gradient(rgba(0, 56, 130, 0.16) 2.5px, transparent 2.5px);
+  background-size: 18px 18px;
+  overflow: hidden;
+  box-shadow: 0 40px 140px rgba(0, 56, 130, 0.7);
+  border: 8px solid var(--comic-cobalt);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 54px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+  z-index: 10;
+}
+
+/* COMIC TOP BAR (Chuẩn Ảnh 1) */
+.comic-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 4px solid var(--comic-cobalt);
+  box-shadow: 6px 6px 0px var(--comic-orange);
+  padding: 10px 26px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.comic-burst {
+  font-family: 'Bangers', cursive;
+  font-size: 32px;
+  letter-spacing: 2px;
+  background: var(--comic-orange);
+  color: #FFF;
+  padding: 4px 18px;
+  border: 3px solid var(--comic-cobalt);
+  transform: rotate(-3deg);
+  box-shadow: 4px 4px 0px var(--comic-cobalt);
+  display: inline-block;
+}
+.comic-unit-tag {
+  font-family: 'Bangers', cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--comic-cobalt);
+}
+
+/* COMIC MAIN GRID */
+.comic-main {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+  flex: 1;
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.comic-action-badge {
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--comic-orange);
+  margin-bottom: 4px;
+}
+.comic-title {
+  font-family: 'Bangers', cursive;
+  font-size: 60px;
+  line-height: 1.08;
+  letter-spacing: 2px;
+  color: var(--comic-cobalt);
+  text-shadow: 3px 3px 0px rgba(255, 107, 0, 0.35);
+  margin-bottom: 14px;
+}
+.comic-title span {
+  color: var(--comic-orange);
+}
+
+/* COMIC SPEECH BUBBLE */
+.comic-speech-bubble {
+  background: #FFFFFF;
+  border: 4px solid var(--comic-cobalt);
+  box-shadow: 8px 8px 0px var(--comic-orange);
+  padding: 20px 24px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+.comic-star-title {
+  font-family: 'Bangers', cursive;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: var(--comic-orange);
+  margin-bottom: 8px;
+}
+
+/* COMIC PHOTO */
+.comic-photo {
+  border: 6px solid var(--comic-cobalt);
+  box-shadow: 12px 12px 0px var(--comic-orange);
+  background: #FFF;
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+}
+.comic-photo img {
+  width: 100%;
+  height: calc(100% - 50px);
+  object-fit: cover;
+  display: block;
+}
+.comic-photo-caption {
+  background: var(--comic-orange);
+  color: #FFF;
+  padding: 10px 18px;
+  font-family: 'Bangers', cursive;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* COMIC FOOTER BAR */
+.comic-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--comic-cobalt);
+  color: #FFF;
+  border: 4px solid var(--comic-dark);
+  box-shadow: 6px 6px 0px var(--comic-orange);
+  padding: 10px 48px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  height: 54px;
+}
+
+/* FLOATING HUD CONTROLS */
+#hud-controls {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 30, 66, 0.94);
+  backdrop-filter: blur(16px);
+  border: 2.5px solid var(--comic-orange);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+#hud-controls.hidden-hud {
+  transform: translate(-50%, 140px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hud-btn {
+  background: #FFF;
+  border: 2px solid var(--comic-dark);
+  color: var(--comic-cobalt);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.15s;
+  outline: none;
+}
+.hud-btn:hover {
+  transform: scale(1.1);
+  background: var(--comic-orange);
+  color: #FFF;
+}
+.hud-btn.primary {
+  background: var(--comic-orange);
+  color: #FFF;
+  border-color: #FFF;
+}
+.hud-btn.text-btn {
+  width: auto;
+  border-radius: 999px;
+  padding: 0 14px;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: inherit;
+}
+
+.hud-divider {
+  width: 2px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 0 4px;
+}
+
+.hud-slide-select {
+  height: 38px;
+  background: #FFF;
+  border: 2px solid var(--comic-dark);
+  color: var(--comic-cobalt);
+  border-radius: 8px;
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  max-width: 260px;
+}
+
+.hud-timer-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #FFD600;
+  padding: 0 6px;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 14, 34, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-card {
+  background: #FFF;
+  border: 5px solid var(--comic-cobalt);
+  box-shadow: 12px 12px 0px var(--comic-orange);
+  border-radius: 12px;
+  padding: 32px;
+  width: 90%;
+  max-width: 600px;
+  color: var(--comic-dark);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--comic-cobalt);
+  padding-bottom: 12px;
+}
+.modal-title {
+  font-family: 'Bangers', cursive;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: var(--comic-cobalt);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--comic-cobalt);
+}
+.shortcut-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1.5px dashed rgba(0, 56, 130, 0.2);
+  font-size: 16px;
+  font-weight: 600;
+}
+.shortcut-key {
+  background: var(--comic-cobalt);
+  color: #FFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.export-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.export-spinner-ring {
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(0, 56, 130, 0.2);
+  border-top-color: var(--comic-orange);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.export-bar-track {
+  width: 100%;
+  height: 14px;
+  background: #E2E8F0;
+  border: 2px solid var(--comic-cobalt);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.export-bar-fill {
+  height: 100%;
+  background: var(--comic-orange);
+  transition: width 0.2s ease;
+}
+.export-modal-status {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--comic-cobalt);
+}
