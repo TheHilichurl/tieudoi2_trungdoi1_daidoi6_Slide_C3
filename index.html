@@ -60,18 +60,24 @@ body {
   align-items: center;
 }
 
-/* Base text size enforcement */
-.toc-glass-card .font-25 {
-  font-size: 26px !important;
-  line-height: 1.25 !important;
+/* Base text size enforcement & anti-overflow containment */
+.font-25 {
+  font-size: 23px !important;
+  line-height: 1.45 !important;
 }
+
+.toc-glass-card .font-25 {
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+}
+
 .panoramic-dossier-card .font-25 {
-  font-size: 26px !important;
-  line-height: 1.28 !important;
+  font-size: 23px !important;
+  line-height: 1.35 !important;
 }
 .panoramic-dossier-card ul li {
-  font-size: 23px !important;
-  line-height: 1.28 !important;
+  font-size: 21px !important;
+  line-height: 1.32 !important;
 }
 .panoramic-right-dock {
   gap: 8px !important;
@@ -79,9 +85,303 @@ body {
 .panoramic-dossier-card {
   padding: 10px 18px !important;
 }
-.font-25 {
-  font-size: 38px !important;
+
+/* ANTI-OVERFLOW EXACT FIT FOR QUAD GRID (SLIDES 5, 10, 16) */
+.spatial-quad-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 14px !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  height: calc(100% - 10px) !important;
 }
+
+.spatial-quad-card {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 18px !important;
+  padding: 14px 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 0 !important;
+}
+
+.quad-card-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.quad-icon-box {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.quad-card-header h3 {
+  font-size: 25px !important;
+  font-weight: 800 !important;
+  margin-top: 1px !important;
+}
+
+.spatial-quad-card p.font-25 {
+  font-size: 19.5px !important;
+  line-height: 1.35 !important;
+  margin: 6px 0 !important;
+}
+
+.spatial-quad-card ul.font-25 {
+  margin: 2px 0 0 0 !important;
+  padding: 0 !important;
+}
+
+.spatial-quad-card ul.font-25 li {
+  font-size: 18.5px !important;
+  line-height: 1.32 !important;
+  margin-bottom: 3px !important;
+}
+
+/* TRI-GRID CONTAINMENT (SLIDES 4, 12, 17) */
+.spatial-tri-card {
+  min-height: 0 !important;
+}
+.tri-card-photo {
+  height: 175px !important;
+}
+.spatial-tri-card p.font-25 {
+  font-size: 19px !important;
+  line-height: 1.35 !important;
+}
+.spatial-tri-card ul.font-25 li {
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+}
+
+/* HERO TAKEAWAY CONTAINMENT (SLIDE 19) */
+#slide-19 ul.font-25 li {
+  font-size: 22px !important;
+  line-height: 1.4 !important;
+}
+
+/* TPL 1 REDESIGN: SPATIAL SHOWCASE COVER */
+.spatial-showcase-cover {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  gap: 18px !important;
+  height: calc(100% - 10px) !important;
+}
+
+.showcase-hero-stage {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 26px;
+  padding: 22px 36px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showcase-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.spatial-badge.primary-glow {
+  background: rgba(255, 122, 0, 0.16) !important;
+  border: 1.5px solid rgba(255, 122, 0, 0.4) !important;
+  color: #FF7A00 !important;
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.25) !important;
+}
+
+.spatial-badge.frosted-blue {
+  background: rgba(56, 189, 248, 0.14) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+  color: #38BDF8 !important;
+}
+
+.spatial-badge.frosted-glass {
+  background: rgba(16, 185, 129, 0.14) !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+  color: #10B981 !important;
+}
+
+.showcase-grand-title {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #FFFFFF 30%, #FFB066 65%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+  max-width: 1550px;
+}
+
+.showcase-grand-desc {
+  font-size: 23px;
+  line-height: 1.45;
+  color: #CBD5E1;
+  max-width: 1400px;
+}
+
+.showcase-dock-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.showcase-glass-tile {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.showcase-glass-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 122, 0, 0.5);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.tile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.tile-icon-ring {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tile-kicker {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #FF7A00;
+  display: block;
+}
+
+.tile-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.tile-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 19px;
+}
+.tile-stat-row:last-child {
+  border-bottom: none;
+}
+.tile-stat-label {
+  color: #94A3B8;
+}
+.tile-stat-val {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.tile-desc {
+  font-size: 19.5px;
+  line-height: 1.45;
+  color: #CBD5E1;
+  margin-bottom: 14px;
+}
+
+.showcase-cta-btn {
+  background: linear-gradient(135deg, #FF7A00, #EA580C);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  color: #FFFFFF;
+  padding: 13px 22px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.4);
+  transition: all 0.25s ease;
+}
+.showcase-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(255, 122, 0, 0.6);
+}
+
+.showcase-center-photo {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.showcase-photo-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.showcase-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.showcase-photo-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 22px;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 11, 24, 0.96) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.photo-tag-pill {
+  font-size: 13px;
+  font-weight: 800;
+  color: #FF7A00;
+  letter-spacing: 0.5px;
+}
+.showcase-photo-bar h4 {
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
 }
 
 /* Viewport 16:9 Shell */
@@ -1286,43 +1586,92 @@ body {
         </div>
       </div>
     
-          <div class="spatial-cover-layout">
-            <div class="cover-left-glass">
-              <div class="spatial-badge">
-                <i data-lucide="shield-alert" style="width: 20px; height: 20px; color: #FF7A00;"></i>
-                <span>BÁO CÁO CHIẾN LƯỢC QUỐC PHÒNG ĐỈNH CAO</span>
+          <div class="spatial-showcase-cover">
+            <!-- 1. Upper Grand Spatial Hero Banner -->
+            <div class="showcase-hero-stage">
+              <div class="showcase-badges-row">
+                <div class="spatial-badge primary-glow">
+                  <i data-lucide="shield-check" style="width: 18px; height: 18px; color: #FF7A00;"></i>
+                  <span>BÁO CÁO CHIẾN LƯỢC QUỐC PHÒNG ĐỈNH CAO</span>
+                </div>
+                <div class="spatial-badge frosted-blue">
+                  <i data-lucide="sparkles" style="width: 18px; height: 18px; color: #38BDF8;"></i>
+                  <span>GIÁO DỤC QUỐC PHÒNG & AN NINH • ĐH ĐẠI NAM</span>
+                </div>
+                <div class="spatial-badge frosted-glass">
+                  <i data-lucide="layers" style="width: 18px; height: 18px; color: #10B981;"></i>
+                  <span>KHUNG CHUẨN HOÁ 20 CHUYÊN ĐỀ</span>
+                </div>
               </div>
-              <h1 class="cover-spatial-title">
+
+              <h1 class="showcase-grand-title">
                 QUẢN TRỊ LỰC LƯỢNG & NGHỆ THUẬT HIỆP ĐỒNG TÁC CHIẾN
               </h1>
-              <p class="font-25" style="color: #CBD5E1; line-height: 1.5; margin-bottom: 24px;">
-                Mô hình quản trị ba cấp Bộ Quốc phòng, 8 mục tiêu chiến lược và thế trận chiến tranh nhân dân bảo vệ Tổ quốc trong kỷ nguyên số.
+
+              <p class="showcase-grand-desc">
+                Mô hình quản trị ba cấp Bộ Quốc phòng, 8 mục tiêu chiến lược và thế trận chiến tranh nhân dân bảo vệ Tổ quốc trong kỷ nguyên số
               </p>
-              <div class="cover-meta-grid">
-                <div class="meta-glass-pill">
-                  <span class="meta-label">ĐƠN VỊ THỰC HIỆN</span>
-                  <strong class="meta-value">Tiểu đội 2 • Trung đội 1</strong>
-                </div>
-                <div class="meta-glass-pill">
-                  <span class="meta-label">HỌC PHẦN ĐÀO TẠO</span>
-                  <strong class="meta-value">Đại đội 6 • Môn GDQP-AN</strong>
-                </div>
-              </div>
-              <div class="cover-cta-dock" onclick="nextSlide()">
-                <div class="cta-inner-btn">
-                  <span>KHÁM PHÁ CHIẾN LƯỢC TÁC CHIẾN</span>
-                  <i data-lucide="arrow-right" style="width: 24px; height: 24px;"></i>
-                </div>
-              </div>
             </div>
 
-            <div class="cover-right-glass">
-              <div class="cover-photo-frame">
-                <img src="assets/vn-honour-guard.jpg" alt="Duyệt binh QĐNDVN" class="cover-hero-img">
-                <div class="cover-photo-overlay-dock">
-                  <div class="photo-overlay-tag">QUÂN ĐỘI TỪ NHÂN DÂN MÀ RA</div>
-                  <h3 style="font-size: 34px; font-weight: 800; color: #FFF; margin-top: 4px;">KỶ NGUYÊN VƯƠN MÌNH CỦA DÂN TỘC</h3>
-                  <p class="font-25" style="color: #E2E8F0; margin-top: 4px;">Xây dựng Quân đội nhân dân Việt Nam cách mạng, chính quy, tinh nhuệ, hiện đại.</p>
+            <!-- 2. Lower 3-Card Spatial Island Grid -->
+            <div class="showcase-dock-grid">
+              <!-- Card 1: Đơn Vị & Lực Lượng -->
+              <div class="showcase-glass-tile">
+                <div class="tile-header">
+                  <div class="tile-icon-ring" style="background: rgba(255, 122, 0, 0.15); border-color: #FF7A00;">
+                    <i data-lucide="users" style="width: 26px; height: 26px; color: #FF7A00;"></i>
+                  </div>
+                  <div>
+                    <span class="tile-kicker">ĐƠN VỊ THỰC HIỆN</span>
+                    <h3 class="tile-title">Tiểu Đội 2 • Trung Đội 1</h3>
+                  </div>
+                </div>
+                <div class="tile-body">
+                  <div class="tile-stat-row">
+                    <span class="tile-stat-label">Đại đội quản lý:</span>
+                    <strong class="tile-stat-val">Đại đội 6</strong>
+                  </div>
+                  <div class="tile-stat-row">
+                    <span class="tile-stat-label">Học phần:</span>
+                    <strong class="tile-stat-val">GDQP-AN Kỷ Nguyên Số</strong>
+                  </div>
+                  <div class="tile-stat-row">
+                    <span class="tile-stat-label">Định dạng chuẩn:</span>
+                    <strong class="tile-stat-val" style="color: #FF7A00;">Spatial VisionOS 2K</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Center Widescreen Panoramic Photo Window -->
+              <div class="showcase-glass-tile showcase-center-photo">
+                <div class="showcase-photo-window">
+                  <img src="assets/vn-honour-guard.jpg" alt="Duyệt binh QĐNDVN" class="showcase-photo-img">
+                  <div class="showcase-photo-bar">
+                    <span class="photo-tag-pill">KỶ NGUYÊN VƯƠN MÌNH</span>
+                    <h4>Quân Đội Cách Mạng, Chính Quy, Tinh Nhuệ, Hiện Đại</h4>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Phạm Vi & CTA Bắt Đầu -->
+              <div class="showcase-glass-tile">
+                <div class="tile-header">
+                  <div class="tile-icon-ring" style="background: rgba(56, 189, 248, 0.15); border-color: #38BDF8;">
+                    <i data-lucide="compass" style="width: 26px; height: 26px; color: #38BDF8;"></i>
+                  </div>
+                  <div>
+                    <span class="tile-kicker" style="color: #38BDF8;">TRỌNG TÂM CHIẾN LƯỢC</span>
+                    <h3 class="tile-title">3 Cấp Quản Trị & 7 Quân Khu</h3>
+                  </div>
+                </div>
+                <div class="tile-body">
+                  <p class="tile-desc">
+                    Hiệp đồng 5 không gian tác chiến: Đất liền, Vùng biển, Vùng trời, Không gian mạng và Không gian vũ trụ.
+                  </p>
+                  <button class="showcase-cta-btn" onclick="nextSlide()" title="Bắt đầu thuyết trình">
+                    <span>BẮT ĐẦU THUYẾT TRÌNH</span>
+                    <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1899,7 +2248,7 @@ body {
               </div>
             </div>
             <div class="matrix-photo-slot">
-              <img src="assets/vn-hoi-nghi-quoc-gia.jpg" alt="Cảnh Sát Biển Việt Nam" class="matrix-img">
+              <img src="assets/vn-kinh-te.jpg" alt="Cảnh Sát Biển Việt Nam" class="matrix-img">
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Lực lượng chuyên trách thực thi pháp luật, giữ gìn an ninh trật tự trên các vùng biển, thềm lục địa.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
@@ -2069,7 +2418,7 @@ body {
         
             </div>
             <div class="panoramic-left-viewport">
-              <img src="assets/vn-gepard-ship.jpg" alt="Fleet" class="panoramic-hero-img">
+              <img src="assets/vn-tau-ten-lua-molniya.jpg" alt="Fleet" class="panoramic-hero-img">
               <div class="panoramic-viewport-dock">
                 <div class="photo-overlay-tag">HẢI QUÂN HIỆN ĐẠI</div>
                 <h3 style="font-size: 34px; font-weight: 800; color: #FFF; margin-top: 4px;">QUÂN CHỦNG TIẾN THẲNG LÊN HIỆN ĐẠI</h3>
@@ -2236,7 +2585,7 @@ body {
     
           <div class="panoramic-split-grid">
             <div class="panoramic-left-viewport">
-              <img src="assets/vn-su30mk2.jpg" alt="Viewport" class="panoramic-hero-img">
+              <img src="assets/vn-tiem-kich-su27.jpg" alt="Viewport" class="panoramic-hero-img">
               <div class="panoramic-viewport-dock">
                 <div class="photo-overlay-tag">HỔ MANG CHÚA SU-30MK2</div>
                 <h3 style="font-size: 34px; font-weight: 800; color: #FFF; margin-top: 4px;">TIÊM KÍCH ĐA NĂNG CHỦ LỰC</h3>
@@ -2339,7 +2688,7 @@ body {
         
           <div class="spatial-tri-card">
             <div class="tri-card-photo">
-              <img src="assets/vn-ten-lua-phong-khong.jpg" alt="Lữ Đoàn Tên Lửa">
+              <img src="assets/vn-ten-lua-phong-khong-moi.jpg" alt="Lữ Đoàn Tên Lửa">
             </div>
             <div class="tri-card-body">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
@@ -2358,7 +2707,7 @@ body {
         
           <div class="spatial-tri-card">
             <div class="tri-card-photo">
-              <img src="assets/vn-phao-binh-bo-bien.jpg" alt="Pháo PK & Tên Lửa Vác Vai">
+              <img src="assets/vn-phao-bm21-grad.jpg" alt="Pháo PK & Tên Lửa Vác Vai">
             </div>
             <div class="tri-card-body">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
@@ -2507,7 +2856,7 @@ body {
     
           <div class="panoramic-split-grid">
             <div class="panoramic-left-viewport">
-              <img src="assets/vn-tang-thiet-giap.jpg" alt="Viewport" class="panoramic-hero-img">
+              <img src="assets/vn-xe-btr-thiet-giap.jpg" alt="Viewport" class="panoramic-hero-img">
               <div class="panoramic-viewport-dock">
                 <div class="photo-overlay-tag">QUẢ ĐẤM THÉP T-90S</div>
                 <h3 style="font-size: 34px; font-weight: 800; color: #FFF; margin-top: 4px;">TĂNG CHIẾN ĐẤU CHỦ LỰC THẾ HỆ MỚI</h3>
@@ -2832,7 +3181,7 @@ body {
         
           <div class="spatial-tri-card">
             <div class="tri-card-photo">
-              <img src="assets/vn-hiep-dong-llvt.jpg" alt="Xử Lý Tình Huống Mất Liên Lạc">
+              <img src="assets/vn-military-parade.png" alt="Xử Lý Tình Huống Mất Liên Lạc">
             </div>
             <div class="tri-card-body">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
@@ -2932,7 +3281,7 @@ body {
               </div>
             </div>
             <div class="matrix-photo-slot">
-              <img src="assets/vn-canh-sat-bien-8002.jpg" alt="Hiệp Đồng Đổ Bộ Tái Chiếm" class="matrix-img">
+              <img src="assets/vn-halong-terrain.jpg" alt="Hiệp Đồng Đổ Bộ Tái Chiếm" class="matrix-img">
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Chiến dịch hiệp đồng đổ bộ đường biển và đường không chi viện đảo khi bị đối phương tấn công.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
