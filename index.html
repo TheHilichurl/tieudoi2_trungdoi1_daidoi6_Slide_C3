@@ -62,28 +62,32 @@ body {
 
 /* Base text size enforcement & anti-overflow containment */
 .font-25 {
-  font-size: 23px !important;
-  line-height: 1.45 !important;
+  font-size: 24px !important;
+  line-height: 1.42 !important;
 }
 
 .toc-glass-card .font-25 {
-  font-size: 24px !important;
-  line-height: 1.3 !important;
+  font-size: 25px !important;
+  line-height: 1.32 !important;
+}
+
+.panoramic-left-viewport {
+  height: 580px !important;
 }
 
 .panoramic-dossier-card .font-25 {
+  font-size: 24.5px !important;
+  line-height: 1.38 !important;
+}
+.panoramic-dossier-card ul li {
   font-size: 23px !important;
   line-height: 1.35 !important;
 }
-.panoramic-dossier-card ul li {
-  font-size: 21px !important;
-  line-height: 1.32 !important;
-}
-.panoramic-right-dock {
-  gap: 8px !important;
+.panoramic-right-stack {
+  gap: 12px !important;
 }
 .panoramic-dossier-card {
-  padding: 10px 18px !important;
+  padding: 12px 20px !important;
 }
 
 /* ANTI-OVERFLOW EXACT FIT FOR QUAD GRID (SLIDES 5, 10, 16) */
@@ -115,21 +119,27 @@ body {
 }
 
 .quad-icon-box {
-  width: 44px !important;
-  height: 44px !important;
+  width: 48px !important;
+  height: 48px !important;
   border-radius: 12px !important;
   flex-shrink: 0 !important;
 }
 
+.quad-sub-tag {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+
 .quad-card-header h3 {
-  font-size: 25px !important;
+  font-size: 28px !important;
   font-weight: 800 !important;
   margin-top: 1px !important;
 }
 
 .spatial-quad-card p.font-25 {
-  font-size: 19.5px !important;
-  line-height: 1.35 !important;
+  font-size: 22px !important;
+  line-height: 1.38 !important;
   margin: 6px 0 !important;
 }
 
@@ -139,30 +149,57 @@ body {
 }
 
 .spatial-quad-card ul.font-25 li {
-  font-size: 18.5px !important;
-  line-height: 1.32 !important;
-  margin-bottom: 3px !important;
+  font-size: 21px !important;
+  line-height: 1.34 !important;
+  margin-bottom: 4px !important;
 }
 
-/* TRI-GRID CONTAINMENT (SLIDES 4, 12, 17) */
+/* TRI-GRID ENHANCED TYPOGRAPHY (SLIDES 4, 8, 10, 12, 13, 17, 19) */
 .spatial-tri-card {
   min-height: 0 !important;
 }
 .tri-card-photo {
-  height: 175px !important;
+  height: 165px !important;
+}
+.tri-card-body {
+  padding: 16px 20px !important;
 }
 .spatial-tri-card p.font-25 {
-  font-size: 19px !important;
-  line-height: 1.35 !important;
+  font-size: 23px !important;
+  line-height: 1.42 !important;
 }
 .spatial-tri-card ul.font-25 li {
-  font-size: 18px !important;
-  line-height: 1.3 !important;
+  font-size: 22px !important;
+  line-height: 1.38 !important;
+}
+.tri-card-status {
+  padding: 10px 20px !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+}
+
+/* MATRIX GRID ENHANCED TYPOGRAPHY (SLIDES 7, 15, 18) */
+.matrix-photo-slot {
+  height: 160px !important;
+}
+.matrix-card p.font-25 {
+  font-size: 23.5px !important;
+  line-height: 1.42 !important;
+}
+.matrix-card ul.font-25 li {
+  font-size: 22px !important;
+  line-height: 1.38 !important;
+}
+.matrix-badge {
+  font-size: 16px !important;
+}
+.matrix-center-badge {
+  font-size: 16px !important;
 }
 
 /* HERO TAKEAWAY CONTAINMENT (SLIDE 19) */
 #slide-19 ul.font-25 li {
-  font-size: 22px !important;
+  font-size: 22.5px !important;
   line-height: 1.4 !important;
 }
 
@@ -274,8 +311,8 @@ body {
 }
 
 .tile-icon-ring {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 14px;
   border: 1.5px solid;
   display: flex;
@@ -285,15 +322,15 @@ body {
 }
 
 .tile-kicker {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   color: #FF7A00;
   display: block;
 }
 
 .tile-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 800;
   color: #FFFFFF;
 }
@@ -302,26 +339,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 19px;
+  font-size: 24px;
 }
 .tile-stat-row:last-child {
   border-bottom: none;
 }
 .tile-stat-label {
   color: #94A3B8;
+  font-size: 22px;
 }
 .tile-stat-val {
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.tile-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .tile-desc {
-  font-size: 19.5px;
-  line-height: 1.45;
+  font-size: 23px;
+  line-height: 1.55;
   color: #CBD5E1;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .showcase-cta-btn {
@@ -329,8 +375,8 @@ body {
   border: 1.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   color: #FFFFFF;
-  padding: 13px 22px;
-  font-size: 18px;
+  padding: 15px 24px;
+  font-size: 20px;
   font-weight: 800;
   cursor: pointer;
   display: flex;
@@ -1628,8 +1674,12 @@ body {
                 </div>
                 <div class="tile-body">
                   <div class="tile-stat-row">
+                    <span class="tile-stat-label">Đơn vị chủ trì:</span>
+                    <strong class="tile-stat-val" style="color: #FF7A00;">Tiểu Đội 2 • Trung Đội 1</strong>
+                  </div>
+                  <div class="tile-stat-row">
                     <span class="tile-stat-label">Đại đội quản lý:</span>
-                    <strong class="tile-stat-val">Đại đội 6</strong>
+                    <strong class="tile-stat-val">Đại đội 6 • ĐH Đại Nam</strong>
                   </div>
                   <div class="tile-stat-row">
                     <span class="tile-stat-label">Học phần:</span>
@@ -1637,7 +1687,7 @@ body {
                   </div>
                   <div class="tile-stat-row">
                     <span class="tile-stat-label">Định dạng chuẩn:</span>
-                    <strong class="tile-stat-val" style="color: #FF7A00;">Spatial VisionOS 2K</strong>
+                    <strong class="tile-stat-val" style="color: #38BDF8;">Spatial VisionOS 2K</strong>
                   </div>
                 </div>
               </div>
@@ -1670,7 +1720,7 @@ body {
                   </p>
                   <button class="showcase-cta-btn" onclick="nextSlide()" title="Bắt đầu thuyết trình">
                     <span>BẮT ĐẦU THUYẾT TRÌNH</span>
-                    <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                    <i data-lucide="arrow-right" style="width: 22px; height: 22px;"></i>
                   </button>
                 </div>
               </div>
@@ -2029,7 +2079,7 @@ body {
                 <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-top: 2px;">Học Viện Quốc Phòng</h3>
               </div>
             </div>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Trung tâm đào tạo cán bộ quân sự cao cấp và bồi dưỡng kiến thức quốc phòng an ninh cho lãnh đạo Đảng, Nhà nước.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Đào tạo cán bộ quân sự cao cấp và bồi dưỡng kiến thức quốc phòng cho lãnh đạo Đảng, Nhà nước.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
               <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Nghiên cứu chiến lược quân sự và nghệ thuật chiến dịch.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Đào tạo đội ngũ tướng lĩnh và chỉ huy sư đoàn, quân đoàn.</span></li>
             </ul>
@@ -2045,7 +2095,7 @@ body {
                 <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-top: 2px;">HV Kỹ Thuật Quân Sự</h3>
               </div>
             </div>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Trường đại học trọng điểm quốc gia đào tạo kỹ sư công nghệ cao cho quân đội và nền kinh tế.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Đại học trọng điểm quốc gia đào tạo kỹ sư công nghệ cao cho quân đội và nền kinh tế.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
               <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>Nghiên cứu an toàn thông tin, UAV và tên lửa phòng thủ.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>Đào tạo chuyên gia tác chiến mạng và vũ khí công nghệ cao.</span></li>
             </ul>
@@ -2061,7 +2111,7 @@ body {
                 <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-top: 2px;">Học Viện Lục Quân</h3>
               </div>
             </div>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Đào tạo sĩ quan chỉ huy tham mưu cấp trung đoàn, lữ đoàn binh chủng hợp thành trên mọi địa hình tác chiến.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Đào tạo sĩ quan chỉ huy tham mưu cấp trung đoàn, lữ đoàn binh chủng hợp thành.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
               <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Huấn luyện nghệ thuật tác chiến khu vực đồi núi, đô thị.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Rèn luyện tư duy hiệp đồng quân binh chủng sắc sảo.</span></li>
             </ul>
@@ -2077,7 +2127,7 @@ body {
                 <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-top: 2px;">Viện Chiến Lược Quốc Phòng</h3>
               </div>
             </div>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Cơ quan nghiên cứu lý luận quân sự, tham mưu xây dựng Sách trắng Quốc phòng và đường lối bảo vệ Tổ quốc.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 10px 0;">Cơ quan lý luận quân sự, tham mưu xây dựng Sách trắng Quốc phòng và đường lối bảo vệ Tổ quốc.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
               <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #F59E0B; flex-shrink: 0; margin-top: 5px;"></i><span>Đúc kết bài học chiến tranh hiện đại trên thế giới.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #F59E0B; flex-shrink: 0; margin-top: 5px;"></i><span>Hoàn thiện học thuyết chiến tranh nhân dân Việt Nam.</span></li>
             </ul>
@@ -2148,7 +2198,7 @@ body {
             <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-bottom: 6px;">7 Quân Khu & BTL Thủ Đô</h3>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Chỉ huy lực lượng vũ trang địa phương, xây dựng khu vực phòng thủ tỉnh, thành phố kiên cố.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
-              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>Quân khu 1, 2, 3, 4, 5, 7, 9 phụ trách từng hướng chiến lược biên giới, bờ biển và đồng bằng.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>Xây dựng thế trận lòng dân kết hợp công sự ngầm vững chắc.</span></li>
+              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>7 Quân khu phụ trách các hướng chiến lược biên giới, bờ biển và đồng bằng.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #38BDF8; flex-shrink: 0; margin-top: 5px;"></i><span>Xây dựng thế trận lòng dân kết hợp công sự ngầm vững chắc.</span></li>
             </ul>
           </div>
         
@@ -2158,9 +2208,9 @@ body {
               <span class="dossier-pill" style="border-color: #FF7A00; color: #FF7A00;">QUÂN ĐOÀN 12 & 34</span>
             </div>
             <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-bottom: 6px;">Quân Đoàn Cơ Động Chiến Lược</h3>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng dự bị cơ động quy mô lớn sẵn sàng cơ động thọc sâu đánh tiêu diệt địch.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng cơ động quy mô lớn sẵn sàng thọc sâu tiêu diệt các cánh quân địch.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
-              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Quân đoàn 12: Quả đấm thép miền Bắc sáp nhập từ Quân đoàn 1 và Quân đoàn 2.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Quân đoàn 34: Quả đấm thép miền Nam sáp nhập từ Quân đoàn 3 và Quân đoàn 4.</span></li>
+              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Quân đoàn 12: Quả đấm thép miền Bắc (sáp nhập từ Quân đoàn 1 và 2).</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Quân đoàn 34: Quả đấm thép miền Nam (sáp nhập từ Quân đoàn 3 và 4).</span></li>
             </ul>
           </div>
         
@@ -2228,7 +2278,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Lực lượng chuyên trách nòng cốt bảo vệ biên giới quốc gia trên bộ và cửa khẩu quốc tế.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #10B981; flex-shrink: 0; margin-top: 4px;"></i><span>Tuần tra, kiểm soát đường biên, mốc giới, phòng chống vượt biên trái phép.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #10B981; flex-shrink: 0; margin-top: 4px;"></i><span>Đấu tranh triệt phá các chuyên án ma túy và buôn lậu qua biên giới.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #10B981; flex-shrink: 0; margin-top: 4px;"></i><span>Gắn bó máu thịt với đồng bào các dân tộc thiểu số vùng cao.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #10B981; flex-shrink: 0; margin-top: 4px;"></i><span>Tuần tra, kiểm soát chặt chẽ đường biên mốc giới, ngăn chặn vượt biên trái phép.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #10B981; flex-shrink: 0; margin-top: 4px;"></i><span>Triệt phá các chuyên án buôn lậu ma túy và gắn bó máu thịt với đồng bào vùng cao.</span></li>
             </ul>
           </div>
         
@@ -2252,7 +2302,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Lực lượng chuyên trách thực thi pháp luật, giữ gìn an ninh trật tự trên các vùng biển, thềm lục địa.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Tuần tra bảo vệ ngư trường, xua đuổi tàu nước ngoài xâm phạm chủ quyền.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Cứu hộ, cứu nạn ngư dân gặp thiên tai bão gió xa bờ.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Trang bị tàu tuần tra hiện đại cơ động chịu sóng gió cấp 9 - 12.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Tuần tra bảo vệ vững chắc ngư trường, kiên quyết xua đuổi tàu xâm phạm chủ quyền.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Cứu hộ cứu nạn ngư dân xa bờ và sẵn sàng cơ động chịu sóng gió cấp 9 – 12.</span></li>
             </ul>
           </div>
         
@@ -2912,8 +2962,8 @@ body {
           <i data-lucide="sparkles" style="width: 18px; height: 18px; color: #FF7A00;"></i>
           <span>MỤC TIÊU 5 // TĂNG THIẾT GIÁP & ĐẶC CÔNG</span>
         </div>
-        <h1 class="spatial-header-title">Quả Đấm Thép Đột Kích & Nghệ Thuật Tác Chiến Đặc Công Xuất Quỷ Nhập Thần</h1>
-        <p class="spatial-header-subtitle">Sự kết hợp hoàn hảo giữa sức mạnh cơ động hỏa lực của Tăng Thiết giáp với đòn đánh độc hiểm của Đặc công</p>
+        <h1 class="spatial-header-title">Quả Đấm Thép Đột Kích & Nghệ Thuật Tác Chiến Đặc Công</h1>
+        <p class="spatial-header-subtitle">Hiệp đồng hỏa lực cơ động của Tăng Thiết giáp với đòn đánh độc hiểm xuất quỷ nhập thần của Đặc công</p>
       </div>
     
           <div class="panoramic-split-grid">
@@ -2933,9 +2983,9 @@ body {
               <span class="dossier-pill" style="border-color: #FF7A00; color: #FF7A00;">BINH CHỦNG TĂNG THIẾT GIÁP</span>
             </div>
             <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-bottom: 6px;">Sức Mạnh Thiết Giáp Chủ Lực</h3>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng đột kích chủ yếu trên bộ, giữ vai trò then chốt trong các chiến dịch hiệp đồng.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng đột kích chủ yếu trên bộ, giữ vai trò then chốt trong tác chiến.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
-              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Hiện đại hóa với xe tăng chiến đấu T-90S/SK và cải tiến sâu T-54B/T-55.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Phương châm: 'Đã ra quân là đánh thắng, cơ động nhanh, hỏa lực mạnh'.</span></li>
+              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Trang bị xe tăng T-90S/SK và cải tiến sâu dòng T-54B/T-55.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #FF7A00; flex-shrink: 0; margin-top: 5px;"></i><span>Phương châm: Đã ra quân là đánh thắng, hỏa lực cơ động mạnh.</span></li>
             </ul>
           </div>
         
@@ -2945,9 +2995,9 @@ body {
               <span class="dossier-pill" style="border-color: #10B981; color: #10B981;">BINH CHỦNG ĐẶC CÔNG</span>
             </div>
             <h3 style="font-size: 32px; font-weight: 800; color: #FFF; margin-bottom: 6px;">Binh Chủng Tinh Nhuệ Đặc Biệt</h3>
-            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng tác chiến đặc biệt: Đặc công bộ, Đặc công nước và Đặc công biệt động.</p>
+            <p class="font-25" style="color: #CBD5E1; line-height: 1.4; margin-bottom: 8px;">Lực lượng tác chiến đặc biệt: Đặc công bộ, nước và biệt động.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.4;">
-              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Nghệ thuật 'Luồn sâu, đánh hiểm, đánh trúng đầu não chỉ huy đối phương'.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Khả năng ngụy trang tuyệt hảo, chịu đựng phi thường trong mọi nghịch cảnh.</span></li>
+              <li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Nghệ thuật luồn sâu, đánh hiểm trúng đầu não đối phương.</span></li><li style="margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px;"><i data-lucide="check" style="width: 18px; height: 18px; color: #10B981; flex-shrink: 0; margin-top: 5px;"></i><span>Ngụy trang tuyệt hảo, tác chiến kiên cường trong nghịch cảnh.</span></li>
             </ul>
           </div>
         
@@ -3015,7 +3065,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Bảo đảm công trình phòng thủ, bắc cầu vượt sông, mở đường cho xe tăng và bộ đội tiến công.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Bắc cầu phao PMP vượt sông Hồng, sông Mã trong điều kiện địch đánh phá.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Xây dựng hệ thống công sự ngầm kiên cố chịu được bom xuyên hiện đại.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Rà phá bom mìn, khắc phục vật cản phục vụ cơ động chiến đấu.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Bắc cầu phao PMP vượt sông và mở đường cơ động cho bộ đội, xe tăng tiến công.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Rà phá bom mìn, xây dựng hệ thống công sự ngầm kiên cố chịu bom hiện đại.</span></li>
             </ul>
           </div>
         
@@ -3039,7 +3089,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Trinh sát, tẩy độc, xử lý ô nhiễm hóa chất độc hại và màn khói ngụy trang nghi binh.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #F59E0B; flex-shrink: 0; margin-top: 4px;"></i><span>Phát hiện và cảnh báo sớm nguy cơ nhiễm độc phóng xạ, hóa học, sinh học.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #F59E0B; flex-shrink: 0; margin-top: 4px;"></i><span>Tiêu tẩy khí tài quân sự và tiêu độc thực địa cho các quân binh chủng.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #F59E0B; flex-shrink: 0; margin-top: 4px;"></i><span>Bắn khói ngụy trang che mắt các thiết bị dẫn đường quang điện tử của đối phương.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #F59E0B; flex-shrink: 0; margin-top: 4px;"></i><span>Phát hiện, cảnh báo sớm và tiêu tẩy chất độc hóa học, sinh học, phóng xạ.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #F59E0B; flex-shrink: 0; margin-top: 4px;"></i><span>Bắn khói ngụy trang hiện đại che mắt khí tài trinh sát dẫn đường của địch.</span></li>
             </ul>
           </div>
         
@@ -3323,7 +3373,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Phương pháp công tác tham mưu khoa học giúp chỉ huy ra quyết định tác chiến chính xác.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Phương pháp song song: Triển khai kế hoạch tác chiến đồng thời các cấp.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Phương pháp tuần tự: Xây dựng mệnh lệnh từ cấp chiến lược xuống phân đội.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Phương pháp kết hợp: Ứng dụng mô phỏng số hóa rút ngắn thời gian chuẩn bị.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Phương pháp song song & tuần tự: Triển khai mệnh lệnh tác chiến đồng bộ các cấp.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #38BDF8; flex-shrink: 0; margin-top: 4px;"></i><span>Phương pháp kết hợp: Ứng dụng mô phỏng số hóa rút ngắn thời gian chuẩn bị.</span></li>
             </ul>
           </div>
         
@@ -3347,7 +3397,7 @@ body {
             </div>
             <p class="font-25" style="color: #CBD5E1; line-height: 1.45; margin: 12px 0;">Chiến dịch hiệp đồng đổ bộ đường biển và đường không chi viện đảo khi bị đối phương tấn công.</p>
             <ul class="font-25" style="list-style: none; padding: 0; margin: 0; color: #E2E8F0; line-height: 1.45;">
-              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #FF7A00; flex-shrink: 0; margin-top: 4px;"></i><span>Không quân tiêm kích Su-30MK2 chế áp hỏa lực ven bờ và khống chế bầu trời.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #FF7A00; flex-shrink: 0; margin-top: 4px;"></i><span>Hải quân đánh bộ đổ bộ thần tốc từ tàu vận tải vũ trang.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #FF7A00; flex-shrink: 0; margin-top: 4px;"></i><span>Trực thăng săn ngầm bảo vệ đội hình tàu đổ bộ trước ngư lôi địch.</span></li>
+              <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #FF7A00; flex-shrink: 0; margin-top: 4px;"></i><span>Không quân Su-30MK2 khống chế bầu trời, chế áp hỏa lực ven bờ chi viện đảo.</span></li><li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;"><i data-lucide="check-circle" style="width: 20px; height: 20px; color: #FF7A00; flex-shrink: 0; margin-top: 4px;"></i><span>Hải quân đánh bộ đổ bộ thần tốc phối hợp trực thăng săn ngầm bảo vệ tàu.</span></li>
             </ul>
           </div>
         
